@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <link href="/src/output.css" rel="stylesheet" />
+    <link href="/output.css" rel="stylesheet" />
     <link
       rel="icon"
       type="image/png"
@@ -84,8 +84,9 @@
             <input
               type="radio"
               class="w-3"
-              id="querys"
+              id="querysh"
               name="querys"
+              value="General Querys"
               required
             />
             General Enquiry
@@ -96,6 +97,7 @@
               class="w-3"
               id="querys"
               name="querys"
+              value="Support Querys"
               required
             />
             Support Request
@@ -115,7 +117,14 @@
       </div>
       <div>
         <label for="cb" class="text-xs">
-          <input id="cb" type="checkbox" class="me-2" name="cb" required />
+          <input
+            id="cb"
+            type="checkbox"
+            class="me-2"
+            name="cb"
+            value="consent"
+            required
+          />
           I consent to being contacted by the team
           <span class="text-red-400">*</span>
         </label>
