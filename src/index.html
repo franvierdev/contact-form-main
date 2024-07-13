@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link href="/src/output.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-[hsl(148,38%,91%)]">
+    <form
+      action="https://formspree.io/f/mwpeplyk"
+      method="post"
+      class="max-lg:mt-4 lg:mt-28 border max-lg:w-5/6 lg:max-w-md mx-auto bg-white rounded-xl p-5 flex flex-col gap-5"
+    >
+      <div class="font-bold max-lg:text-3xl">Contact Us</div>
+      <div class="flex max-lg:flex-col max-lg:gap-2 w-full justify-between">
+        <div class="flex flex-col">
+          <label for="firstName" class="text-xs mb-2"
+            >First Name <span class="text-red-400">*</span></label
+          >
+          <input
+            type="text"
+            id="firstName"
+            class="border rounded-md w-48"
+            name="firstName"
+            required
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="lastName" class="text-xs mb-2"
+            >Last Name <span class="text-red-400">*</span></label
+          >
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            class="border rounded-md w-48"
+            required
+          />
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <label for="email" class="text-xs mb-2"
+          >Email Address <span class="text-red-400">*</span></label
+        >
+        <input
+          type="email"
+          placeholder="ej: caracola@gmail.com"
+          class="border rounded-md ps-1 py-[2px]"
+          id="email"
+          name="email"
+          required
+        />
+      </div>
+      <div class="">
+        <label class="text-xs">
+          Query type <span class="text-red-400">*</span>
+        </label>
+        <div
+          class="flex max-lg:flex-col justify-between max-lg:gap-2 mt-1 lg:place-items-center"
+        >
+          <label class="border rounded-md ps-2 py-1 text-sm w-48">
+            <input
+              type="radio"
+              class="w-3"
+              id="querys"
+              name="querys"
+              required
+            />
+            General Enquiry
+          </label>
+          <label class="border rounded-md ps-2 py-1 text-sm w-48">
+            <input
+              type="radio"
+              class="w-3"
+              id="querys"
+              name="querys"
+              required
+            />
+            Support Request
+          </label>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <label for="Message" class="text-xs mb-2"
+          >Message <span class="text-red-400">*</span></label
+        >
+        <textarea
+          name="Message"
+          id="Message"
+          class="border rounded-md"
+          required
+        ></textarea>
+      </div>
+      <div>
+        <label for="cb" class="text-xs">
+          <input id="cb" type="checkbox" class="me-2" name="cb" required />
+          I consent to being contacted by the team
+          <span class="text-red-400">*</span>
+        </label>
+      </div>
+      <button
+        type="submit"
+        value="enviar"
+        class="bg-[hsl(169,82%,27%)] p-1 rounded-md text-white"
+      >
+        Submit
+      </button>
+    </form>
+
+    <div class="attribution mb-10">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
