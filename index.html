@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <link href="/output.css" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet" />
     <link
       rel="icon"
       type="image/png"
@@ -24,66 +24,75 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
     <link href="./styles.css" rel="stylesheet" />
   </head>
   <body class="bg-[hsl(148,38%,91%)]">
     <form
       action="https://formspree.io/f/mwpeplyk"
       method="post"
-      class="max-lg:mt-4 lg:mt-28 border max-lg:w-5/6 lg:max-w-md mx-auto bg-white rounded-xl p-5 flex flex-col gap-5"
+      class="font-karla max-lg:mt-4 lg:mt-28 border max-lg:w-5/6 lg:max-w-xl mx-auto bg-white rounded-xl p-5 flex flex-col gap-5"
     >
-      <div class="font-bold max-lg:text-3xl">Contact Us</div>
-      <div class="flex max-lg:flex-col max-lg:gap-2 w-full justify-between">
-        <div class="flex flex-col">
-          <label for="firstName" class="text-xs mb-2"
+      <div class="font-bold text-2xl">
+        <h4 class="font-[700]">Contact Us</h4>
+      </div>
+      <div class="flex max-lg:flex-col gap-3">
+        <div class="flex flex-col w-full">
+          <label for="firstName" class="lg:text-xs mb-2"
             >First Name <span class="text-red-400">*</span></label
           >
           <input
             type="text"
             id="firstName"
-            class="border rounded-md w-48"
+            class="border-2 class rounded-md"
             name="firstName"
             required
           />
         </div>
-        <div class="flex flex-col">
-          <label for="lastName" class="text-xs mb-2"
+        <div class="flex flex-col w-full">
+          <label for="lastName" class="lg:text-xs mb-2"
             >Last Name <span class="text-red-400">*</span></label
           >
           <input
             type="text"
             id="lastName"
             name="lastName"
-            class="border rounded-md w-48"
+            class="max-lg:input border-2 rounded-md"
             required
           />
         </div>
       </div>
       <div class="flex flex-col">
-        <label for="email" class="text-xs mb-2"
+        <label for="email" class="lg:text-xs mb-2"
           >Email Address <span class="text-red-400">*</span></label
         >
         <input
           type="email"
           placeholder="ej: caracola@gmail.com"
-          class="border rounded-md ps-1 py-[2px]"
+          class="border-2 rounded-md ps-3"
           id="email"
           name="email"
           required
         />
       </div>
       <div class="">
-        <label class="text-xs">
+        <label class="text-sm">
           Query type <span class="text-red-400">*</span>
         </label>
         <div
-          class="flex max-lg:flex-col justify-between max-lg:gap-2 mt-1 lg:place-items-center"
+          class="flex max-lg:flex-col justify-between gap-3 mt-1 lg:place-items-center"
         >
-          <label class="border rounded-md ps-2 py-1 text-sm w-48">
+          <label
+            class="flex place-items-center border-2 rounded-md ps-2 text-sm w-full"
+          >
             <input
               type="radio"
-              class="w-3"
+              class="w-4 mx-2"
               id="querysh"
               name="querys"
               value="General Querys"
@@ -91,10 +100,12 @@
             />
             General Enquiry
           </label>
-          <label class="border rounded-md ps-2 py-1 text-sm w-48">
+          <label
+            class="flex place-items-center border-2 rounded-md ps-2 text-sm w-full"
+          >
             <input
               type="radio"
-              class="w-3"
+              class="w-4 mx-2"
               id="querys"
               name="querys"
               value="Support Querys"
@@ -111,37 +122,36 @@
         <textarea
           name="Message"
           id="Message"
-          class="border rounded-md"
+          class="border-2 rounded-md max-lg:h-48 h-20"
           required
         ></textarea>
       </div>
       <div>
-        <label for="cb" class="text-xs">
+        <label for="cb" class="flex place-items-center text-sm pe-5">
           <input
             id="cb"
             type="checkbox"
-            class="me-2"
+            class="me-3 max-lg:me-4 max-lg:w-4 w-3"
             name="cb"
             value="consent"
             required
           />
-          I consent to being contacted by the team
-          <span class="text-red-400">*</span>
+          I consent to being contacted by the team *
         </label>
       </div>
       <button
         type="submit"
         value="enviar"
-        class="bg-[hsl(169,82%,27%)] p-1 rounded-md text-white"
+        class="bg-[hsl(169,82%,27%)] hover:bg-[hsl(169,57%,17%)] duration-500 p-3 rounded-md text-white"
       >
         Submit
       </button>
     </form>
 
-    <div class="attribution mb-10">
+    <div class="attribution my-10">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://franvier.vercel.app/">Francisco Salazar</a>.
     </div>
   </body>
 </html>
