@@ -554,8 +554,8 @@ video {
   --tw-contain-style:  ;
 }
 
-.relative {
-  position: relative;
+.absolute {
+  position: absolute;
 }
 
 .mx-2 {
@@ -585,8 +585,12 @@ video {
   margin-top: 0.5rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .inline-block {
@@ -599,26 +603,6 @@ video {
 
 .h-20 {
   height: 5rem;
-}
-
-.h-2 {
-  height: 0.5rem;
-}
-
-.h-4 {
-  height: 1rem;
-}
-
-.h-44 {
-  height: 11rem;
-}
-
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-12 {
-  height: 3rem;
 }
 
 .w-3 {
@@ -649,24 +633,8 @@ video {
   gap: 0.75rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.gap-5 {
-  gap: 1.25rem;
-}
-
-.gap-4 {
-  gap: 1rem;
-}
-
 .gap-\[20px\] {
   gap: 20px;
-}
-
-.self-center {
-  align-self: center;
 }
 
 .rounded-md {
@@ -704,14 +672,6 @@ video {
   padding: 0.75rem;
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
-.p-7 {
-  padding: 1.75rem;
-}
-
 .p-6 {
   padding: 1.5rem;
 }
@@ -726,6 +686,10 @@ video {
 
 .ps-3 {
   padding-inline-start: 0.75rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .font-karla {
@@ -775,16 +739,8 @@ video {
 }
 
 @media not all and (min-width: 1024px) {
-  .max-lg\:me-4 {
-    margin-inline-end: 1rem;
-  }
-
   .max-lg\:mt-4 {
     margin-top: 1rem;
-  }
-
-  .max-lg\:me-2 {
-    margin-inline-end: 0.5rem;
   }
 
   .max-lg\:h-48 {
@@ -809,10 +765,6 @@ video {
     margin-top: 7rem;
   }
 
-  .lg\:max-w-2xl {
-    max-width: 42rem;
-  }
-
   .lg\:max-w-xl {
     max-width: 36rem;
   }
@@ -823,10 +775,6 @@ video {
 
   .lg\:p-8 {
     padding: 2rem;
-  }
-
-  .lg\:p-7 {
-    padding: 1.75rem;
   }
 
   .lg\:text-xs {
