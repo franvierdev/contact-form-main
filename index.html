@@ -27,21 +27,21 @@
     ></script>
   </head>
   <body class="bg-[hsl(148,38%,91%)]">
-    <div class="py-10 h-40 mx-auto max-w-xs">
-      <div class="toast-container bg-secondary-subtle">
+    <div class="py-10 h-40 max-w-xs mx-auto d-flex justify-content-center">
+      <div class="toast-container">
         <div
           id="liveToast"
-          class="toast bg-slate-800/70"
+          class="toast text-bg-dark"
           role="alert"
           aria-live="assertive"
           aria-atomic="true"
         >
-          <div class="toast-header">
+          <div class="toast-header text-bg-dark">
             <strong class="me-auto">Mensaje enviado!</strong>
 
             <button
               type="button"
-              class="btn-close"
+              class="btn-close btn-close-white"
               data-bs-dismiss="toast"
               aria-label="Close"
             ></button>
@@ -203,37 +203,33 @@
   ></script>
 
   <script>
+    const forms = document.querySelectorAll(".needs-validation");
     (() => {
       "use strict";
 
       // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      const forms = document.querySelectorAll(".needs-validation");
       const toastTrigger = document.getElementById("liveToastBtn");
       const toastLive = document.getElementById("liveToast");
 
       Array.from(forms).forEach((form) => {
-        form.addEventListener(
-          "submit",
-          (event) => {
-            if (!form.checkValidity()) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            // Loop over them and prevent submission
-            if (toastTrigger && form.checkValidity()) {
-              const toastBootstrap =
-                bootstrap.Toast.getOrCreateInstance(toastLive);
-              toastBootstrap.show();
-              form.reset();
-              event.preventDefault();
-            }
-
-            form.classList.add("was-validated");
-          },
-          false
-        );
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          if (!form.checkValidity()) {
+            event.stopPropagation();
+          }
+          // Loop over them and prevent submission
+          if (toastTrigger && form.checkValidity()) {
+            const toastBootstrap =
+              bootstrap.Toast.getOrCreateInstance(toastLive);
+            toastBootstrap.show();
+          }
+          form.classList.add("was-validated");
+        });
       });
     })();
   </script>
-  <script></script>
+
+  <script>
+    }
+  </script>
 </html>
